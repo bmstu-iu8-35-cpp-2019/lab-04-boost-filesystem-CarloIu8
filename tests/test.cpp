@@ -3,3 +3,5 @@
 #include <gtest/gtest.h>
 
 #include <header.hpp>
+
+TEST(Boost, init) { EXPECT_EQ(1, 2 - 1); }
