@@ -39,8 +39,8 @@ void search(const fs::path& file_path, fs::path& directory,
       std::string x;
       if (s.substr(0, 8) == "balance_") {
         bool flag1 = true;
-        for (size_t i = 8; i < 16; i++) {
-          if (s[i] >= 48 && s[i] <= 57) {
+        for (size_t z = 8; z < 16; z++) {
+          if (s[z] >= 48 && s[z] <= 57) {
             continue;
           } else {
             flag1 = false;
