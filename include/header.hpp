@@ -6,6 +6,7 @@
 #include <boost/filesystem.hpp>
 #include <filesystem>
 #include <iostream>
+#include <map>
 #include <string>
 
 namespace fs = boost::filesystem;
@@ -81,7 +82,7 @@ void search(const fs::path& file_path, fs::path& directory,
 
 void how_many_operations(std::map<operation, int> arr) {
   std::map<operation, int>::iterator it = arr.begin();
-  for (it; it != arr.end(); it++) {  // выводим их
+  for (it; it != arr.end(); it++) {
     std::cout << "Broker:" << (it->first).get_B()
               << " account:" << it->first.get_N() << " Files:" << it->second
               << std::endl;
@@ -94,4 +95,4 @@ void otvet() {
   search(a, a, arr);
   how_many_operations(arr);
 }
-#endif // INCLUDE_HEADER_HPP_
+#endif  // INCLUDE_HEADER_HPP_
