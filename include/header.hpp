@@ -49,8 +49,8 @@ void search(const fs::path& file_path, fs::path& directory,
         if (flag1) {
           if (s[16] == '_') {
             bool flag2 = true;
-            for (size_t i = 8; i < 16; i++) {
-              if (s[i] >= 48 && s[i] <= 57) {
+            for (size_t m = 8; m < 16; m++) {
+              if (s[m] >= 48 && s[m] <= 57) {
                 continue;
               } else {
                 flag2 = false;
@@ -80,8 +80,8 @@ void search(const fs::path& file_path, fs::path& directory,
 }
 
 void how_many_operations(std::map<operation, int> arr) {
-  std::map<operation, int>::iterator it = arr.begin();
-  for (it; it != arr.end(); it++) {
+  for (std::map<operation, int>::iterator it = arr.begin(); it != arr.end();
+       it++) {
     std::cout << "Broker:" << (it->first).get_B()
               << " account:" << it->first.get_N() << " Files:" << it->second
               << std::endl;
