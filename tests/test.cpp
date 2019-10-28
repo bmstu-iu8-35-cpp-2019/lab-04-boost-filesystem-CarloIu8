@@ -4,4 +4,7 @@
 
 #include <header.hpp>
 
-TEST(Boost, init) { EXPECT_EQ(1, 2 - 1); }
+TEST(Boost, init) {
+  otvet();
+  EXPECT_EQ(1, 2 - 1);
+}
