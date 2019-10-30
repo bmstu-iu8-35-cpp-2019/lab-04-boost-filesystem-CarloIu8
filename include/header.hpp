@@ -88,8 +88,8 @@ void how_many_operations(std::map<operation, int> arr) {
   }
 }
 
-void otvet() {
-  boost::filesystem::path a("../ftp");
+void otvet(const fs::path& file_path) {
+  boost::filesystem::path a(file_path);
   std::map<operation, int> arr;
   search(a, a, arr);
   how_many_operations(arr);

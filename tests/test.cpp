@@ -5,6 +5,6 @@
 #include <header.hpp>
 
 TEST(Boost, init) {
-  otvet();
+  otvet("../misc");
   EXPECT_EQ(1, 2 - 1);
 }
