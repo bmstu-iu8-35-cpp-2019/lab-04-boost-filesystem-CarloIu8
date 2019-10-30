@@ -88,7 +88,7 @@ void how_many_operations(std::map<operation, int> arr) {
   }
 }
 
-void otvet(const fs::path& file_path) {
+void otvet(std::string file_path) {
   boost::filesystem::path a(file_path);
   std::map<operation, int> arr;
   search(a, a, arr);
