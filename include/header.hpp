@@ -65,7 +65,7 @@ void search(const fs::path& file_path, fs::path& directory,
                 operation oper(directory.filename().string(),
                                stoi(s.substr(8, 8)),
                                object[stoi(s.substr(8, 8))]);
-                arr[oper] = arr[oper]++;
+                arr[oper]++;
               }
             }
           }
