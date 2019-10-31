@@ -79,7 +79,7 @@ void search(const fs::path& file_path, fs::path& directory,
   return;
 }
 
-void how_many_operations(std::map<operation, int> arr) {
+void how_many_operations(std::map<operation, int> &arr) {
   for (std::map<operation, int>::iterator it = arr.begin(); it != arr.end();
        it++) {
     std::cout << "Broker:" << (it->first).get_B()
