@@ -12,12 +12,16 @@ namespace fs = boost::filesystem;
 
 class operation {
  public:
-  operation(std::string s, int num, int da);
-  bool operator>(const operation& a) const;
-  bool operator<(const operation& a) const;
-  std::string get_B() const;
-  int get_D() const;
-  int get_N() const;
+  operation(std::string s, int num, int da) {
+    broker = s;
+    number = num;
+    data = da;
+  }
+  bool operator>(const operation& a) const { return (a.number > number); }
+  bool operator<(const operation& a) const { return (a.number < number); }
+  std::string get_B() const { return broker; }
+  int get_D() const { return data; }
+  int get_N() const { return number; }
 
  private:
   std::string broker;
@@ -90,6 +94,4 @@ void otvet(std::string file_path) {
   search(a, a, arr);
   how_many_operations(arr);
 }
-
-
 #endif  // INCLUDE_HEADER_HPP_
