@@ -15,7 +15,7 @@ class operation {
   operation(std::string s, int num, int da);
   bool operator>(const operation& a) const;
   bool operator<(const operation& a) const;
-  std::string get_B();
+  std::string get_B() const;
   int get_D() const;
   int get_N() const;
 
